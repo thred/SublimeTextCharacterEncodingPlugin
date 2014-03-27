@@ -1,7 +1,7 @@
 import sublime, sublime_plugin, codecs
  
 CHARACTER_ENCODINGS = [
-   	{ "name": "UTF-8", "value": "utf-8" },
+    { "name": "UTF-8", "value": "utf-8" },
     { "name": "UTF-8 with BOM", "value": "utf-8 with bom" },
     { "name": "UTF-16 LE", "value": "utf-16 le" },
     { "name": "UTF-16 LE with BOM", "value": "utf-16 le with bom" },
@@ -38,51 +38,51 @@ CHARACTER_ENCODINGS = [
 ]
 
 def update_character_encoding(view):
-	encoding = view.encoding()
+    encoding = view.encoding()
 
-	if encoding:
-		view.set_status("Encoding", view.encoding())
-	else:
-		view.erase_status("Encoding")
+    if encoding == "Undefined":
+        view.erase_status("Encoding")
+    else:
+        view.set_status("Encoding", view.encoding())
 
 class CharacterEncodingListener(sublime_plugin.EventListener):
-	def on_new(self, view):
-		update_character_encoding(view)
+    def on_new(self, view):
+        update_character_encoding(view)
 
-	def on_new_async(self, view):
-		update_character_encoding(view)
+    def on_new_async(self, view):
+        update_character_encoding(view)
 
-	def on_clone(self, view):
-		update_character_encoding(view)
+    def on_clone(self, view):
+        update_character_encoding(view)
 
-	def on_clone_async(self, view):
-		update_character_encoding(view)
+    def on_clone_async(self, view):
+        update_character_encoding(view)
 
-	def on_load(self, view):
-		update_character_encoding(view)
+    def on_load(self, view):
+        update_character_encoding(view)
 
-	def on_load_async(self, view):
-		update_character_encoding(view)
+    def on_load_async(self, view):
+        update_character_encoding(view)
 
-	def on_post_save(self, view):
-		update_character_encoding(view)
+    def on_post_save(self, view):
+        update_character_encoding(view)
 
-	def on_post_save_async(self, view):
-		update_character_encoding(view)
+    def on_post_save_async(self, view):
+        update_character_encoding(view)
 
-	def on_activated(self, view):
-		update_character_encoding(view)
+    def on_activated(self, view):
+        update_character_encoding(view)
 
-	def on_activated_async(self, view):
-		update_character_encoding(view)
+    def on_activated_async(self, view):
+        update_character_encoding(view)
 
 class CharacterEncodingCommand(sublime_plugin.TextCommand):
-	def run(self, edit):
-		names = [item['name'] for item in CHARACTER_ENCODINGS]
-		values = [item['value'] for item in CHARACTER_ENCODINGS]
+    def run(self, edit):
+        names = [item['name'] for item in CHARACTER_ENCODINGS]
+        values = [item['value'] for item in CHARACTER_ENCODINGS]
 
-		def select(index):
-			self.view.set_encoding(values[index])
-			update_character_encoding(self.view)
+        def select(index):
+            self.view.set_encoding(values[index])
+            update_character_encoding(self.view)
 
-		self.view.window().show_quick_panel(names, select, 0, 0, None)
+        self.view.window().show_quick_panel(names, select, 0, 0, None)
