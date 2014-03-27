@@ -35,6 +35,7 @@ CHARACTER_ENCODINGS = [
     { "name": "Turkish (Windows 1254)", "value": "Turkish (Windows 1254)" },
     { "name": "Turkish (ISO 8859-9)", "value": "Turkish (ISO 8859-9)" },
     { "name": "Vietnamese (Windows 1258)", "value": "Vietnamese (Windows 1258)" },
+    { "name": "Hexadecimal", "value": "Hexadecimal" }
 ]
 
 def update_character_encoding(view):
