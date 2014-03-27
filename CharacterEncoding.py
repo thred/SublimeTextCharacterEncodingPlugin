@@ -80,9 +80,20 @@ class CharacterEncodingCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         names = [item['name'] for item in CHARACTER_ENCODINGS]
         values = [item['value'] for item in CHARACTER_ENCODINGS]
+        encoding = self.view.encoding()
+
+        try:
+            index = values.index(encoding)
+        except ValueError:
+            index = -1
 
         def select(index):
             self.view.set_encoding(values[index])
             update_character_encoding(self.view)
 
-        self.view.window().show_quick_panel(names, select, 0, 0, None)
+        self.view.window().show_quick_panel(names, select, 0, index, None)
+
+class CharacterEncodingDirectCommand(sublime_plugin.TextCommand):
+    def run(self, edit, encoding):
+        self.view.set_encoding(encoding)
+        update_character_encoding(self.view)

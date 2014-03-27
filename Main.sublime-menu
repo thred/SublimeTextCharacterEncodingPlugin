@@ -1,0 +1,53 @@
+[
+    {
+        "caption": "Edit",
+        "mnemonic": "E",
+        "id": "edit",
+        "children":
+        [
+            {
+                "caption": "Encoding",
+                "children":
+                [
+                    { "caption": "UTF-8", "command": "character_encoding_direct", "args": {"encoding": "utf-8" } },
+                    { "caption": "UTF-8 with BOM", "command": "character_encoding_direct", "args": {"encoding": "utf-8 with bom" } },
+                    { "caption": "UTF-16 LE", "command": "character_encoding_direct", "args": {"encoding": "utf-16 le" } },
+                    { "caption": "UTF-16 LE with BOM", "command": "character_encoding_direct", "args": {"encoding": "utf-16 le with bom" } },
+                    { "caption": "UTF-16 BE", "command": "character_encoding_direct", "args": {"encoding": "utf-16 be" } },
+                    { "caption": "UTF-16 BE with BOM", "command": "character_encoding_direct", "args": {"encoding": "utf-16 be with bom" } },
+                    { "caption": "-" },
+                    { "caption": "Western (Windows 1252)", "command": "character_encoding_direct", "args": {"encoding": "Western (Windows 1252)" } },
+                    { "caption": "Western (ISO 8859-1)", "command": "character_encoding_direct", "args": {"encoding": "Western (ISO 8859-1)" } },
+                    { "caption": "Western (ISO 8859-3)", "command": "character_encoding_direct", "args": {"encoding": "Western (ISO 8859-3)" } },
+                    { "caption": "Western (ISO 8859-15)", "command": "character_encoding_direct", "args": {"encoding": "Western (ISO 8859-15)" } },
+                    { "caption": "Western (Mac Roman)", "command": "character_encoding_direct", "args": {"encoding": "Western (Mac Roman)" } },
+                    { "caption": "DOS (CP 437)", "command": "character_encoding_direct", "args": {"encoding": "DOS (CP 437)" } },
+                    { "caption": "Arabic (Windows 1256)", "command": "character_encoding_direct", "args": {"encoding": "Arabic (Windows 1256)" } },
+                    { "caption": "Arabic (ISO 8859-6)", "command": "character_encoding_direct", "args": {"encoding": "Arabic (ISO 8859-6)" } },
+                    { "caption": "Baltic (Windows 1257)", "command": "character_encoding_direct", "args": {"encoding": "Baltic (Windows 1257)" } },
+                    { "caption": "Baltic (ISO 8859-4)", "command": "character_encoding_direct", "args": {"encoding": "Baltic (ISO 8859-4)" } },
+                    { "caption": "Celtic (ISO 8859-14)", "command": "character_encoding_direct", "args": {"encoding": "Celtic (ISO 8859-14)" } },
+                    { "caption": "Central European (Windows 1250)", "command": "character_encoding_direct", "args": {"encoding": "Central European (Windows 1250)" } },
+                    { "caption": "Central European (ISO 8859-2)", "command": "character_encoding_direct", "args": {"encoding": "Central European (ISO 8859-2)" } },
+                    { "caption": "Cyrillic (Windows 1251)", "command": "character_encoding_direct", "args": {"encoding": "Cyrillic (Windows 1251)" } },
+                    { "caption": "Cyrillic (Windows 866)", "command": "character_encoding_direct", "args": {"encoding": "Cyrillic (Windows 866)" } },
+                    { "caption": "Cyrillic (ISO 8859-5)", "command": "character_encoding_direct", "args": {"encoding": "Cyrillic (ISO 8859-5)" } },
+                    { "caption": "Cyrillic (KOI8-R)", "command": "character_encoding_direct", "args": {"encoding": "Cyrillic (KOI8-R)" } },
+                    { "caption": "Cyrillic (KOI8-U)", "command": "character_encoding_direct", "args": {"encoding": "Cyrillic (KOI8-U)" } },
+                    { "caption": "Estonian (ISO 8859-13)", "command": "character_encoding_direct", "args": {"encoding": "Estonian (ISO 8859-13)" } },
+                    { "caption": "Greek (Windows 1253)", "command": "character_encoding_direct", "args": {"encoding": "Greek (Windows 1253)" } },
+                    { "caption": "Greek (ISO 8859-7)", "command": "character_encoding_direct", "args": {"encoding": "Greek (ISO 8859-7)" } },
+                    { "caption": "Hebrew (Windows 1255)", "command": "character_encoding_direct", "args": {"encoding": "Hebrew (Windows 1255)" } },
+                    { "caption": "Hebrew (ISO 8859-8)", "command": "character_encoding_direct", "args": {"encoding": "Hebrew (ISO 8859-8)" } },
+                    { "caption": "Nordic (ISO 8859-10)", "command": "character_encoding_direct", "args": {"encoding": "Nordic (ISO 8859-10)" } },
+                    { "caption": "Romanian (ISO 8859-16)", "command": "character_encoding_direct", "args": {"encoding": "Romanian (ISO 8859-16)" } },
+                    { "caption": "Turkish (Windows 1254)", "command": "character_encoding_direct", "args": {"encoding": "Turkish (Windows 1254)" } },
+                    { "caption": "Turkish (ISO 8859-9)", "command": "character_encoding_direct", "args": {"encoding": "Turkish (ISO 8859-9)" } },
+                    { "caption": "Vietnamese (Windows 1258)", "command": "character_encoding_direct", "args": {"encoding": "Vietnamese (Windows 1258)" } },
+                    { "caption": "-" },
+                    { "caption": "Hexadecimal", "command": "character_encoding_direct", "args": {"encoding": "Hexadecimal" } }
+                ]
+            }
+        ]
+    }
+]
